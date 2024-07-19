@@ -1,0 +1,37 @@
+question 1 - 
+const express = require('express');
+const app = express();
+const todos = [{ id: 1, title: "play guitar", completed: false }];
+app.use(express.json());
+app.get('/todos', (req, res) => {
+  res.json(todos);
+});
+app.post('/addTodo', (req, res) => {
+  const newTodo = { id: todos.length + 1, title: req.body.title, completed: false };
+  todos.push(newTodo);
+  res.json(newTodo);
+});
+app.listen(8000, () => {
+  console.log('Server listening on port 8000');
+});
+
+
+
+question 2 - 
+The DOM  is a programming interface for HTML and XML documents. It represents the structure of a document as a tree of nodes, where each node represents an element, attribute,
+or piece of text.
+role of the DOM in JavaScript -
+in JavaScript, the DOM is the bridge between your code and the HTML document. It allows you to dynamically interact with the document, making it possible to create responsive,
+interactive, and engaging web pages
+manipulating the DOM -
+To manipulate the DOM, we have to  use JavaScript methods and properties to access and modify the document's elements
+
+
+
+question 3 - 
+Sort method - 
+If we call sorted on an array it will return a new array that sorted in ascending order. In order for this method to work the elements in the array need to conform to the
+Comparable protocol.
+Map method - 
+ It iterates through the array that is calling it, but instead of sorting it changes each element of the array based on the closure passed to the method.
+
